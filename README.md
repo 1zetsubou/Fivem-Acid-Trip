@@ -27,3 +27,5 @@ Spawns 2 Marios around you.
 --------------------------------
 
 The trip last a total of 4mins. This can be changed.
+
+![image](https://user-images.githubusercontent.com/101474430/163679322-622adf71-3a14-49cc-af5b-274949176ad0.png)
