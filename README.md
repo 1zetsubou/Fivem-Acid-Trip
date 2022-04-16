@@ -2,13 +2,13 @@
 Reworked Acid Trip - Original - https://github.com/meta-hub/fivem-acidtrip
 
 
-How to install:
+**How to install:**
 
 Drop the acidtrip.lua into your client side folder in qb-smallresources.
 Copy/paste the client and server side info into your qb-smallresources consumables client and server side.
 Drop the lsd.png into your inventory.
 
-Add this to your core:
+**Add this to your core:**
 
 ```["lsd"] 	= {["name"] = "lsd", 	["label"] = "LSD", 	["weight"] = 100, 	["type"] = "item", 	["image"] = "lsd.png", 		["unique"] = false, 	["useable"] = true, 	["shouldClose"] = false,   ["combinable"] = nil,   ["description"] = "Have fun!"},```
 
