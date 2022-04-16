@@ -10,7 +10,7 @@ Drop the lsd.png into your inventory.
 
 Add this to your core:
 
-["lsd"] 	= {["name"] = "lsd", 	["label"] = "LSD", 	["weight"] = 100, 	["type"] = "item", 	["image"] = "lsd.png", 		["unique"] = false, 	["useable"] = true, 	["shouldClose"] = false,   ["combinable"] = nil,   ["description"] = "Have fun!"},
+```["lsd"] 	= {["name"] = "lsd", 	["label"] = "LSD", 	["weight"] = 100, 	["type"] = "item", 	["image"] = "lsd.png", 		["unique"] = false, 	["useable"] = true, 	["shouldClose"] = false,   ["combinable"] = nil,   ["description"] = "Have fun!"},```
 
 --------------------------------
 
