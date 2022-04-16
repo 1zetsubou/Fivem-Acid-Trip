@@ -1,0 +1,38 @@
+----------------------------
+Client Side Small Resources
+----------------------------
+
+RegisterNetEvent('consumables:client:uselsd', function()
+    QBCore.Functions.Progressbar("use_lsd", "Taking LSD...", 1750, false, true, {
+        disableMovement = false,
+        disableCarMovement = false,
+		disableMouse = false,
+		disableCombat = true,
+    }, {
+		animDict = "mp_suicide",
+		anim = "pill",
+		flags = 49,
+    }, {}, {}, function() -- Done
+        StopAnimTask(PlayerPedId(), "mp_suicide", "pill", 1.0)
+        TriggerServerEvent("QBCore:Server:RemoveItem", "lsd", 1)
+        TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["lsd"], "remove")
+        TriggerEvent("evidence:client:SetStatus", "widepupils", 300)
+        DoAcid(240000)
+        -- exports["qb-smallresources"]:DoAcid(240000)
+    end, function() -- Cancel
+        StopAnimTask(PlayerPedId(), "mp_suicide", "pill", 1.0)
+        QBCore.Functions.Notify("Canceled", "error")
+    end)
+end)
+
+
+
+----------------------------
+Server Side Small Resources
+----------------------------
+
+QBCore.Functions.CreateUseableItem("lsd", function(source, item)
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+    TriggerClientEvent("consumables:client:uselsd", src)
+end)
